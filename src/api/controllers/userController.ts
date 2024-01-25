@@ -59,7 +59,7 @@ const userPost = async (
       .array()
       .map((error) => `${error.msg}: ${error.param}`)
       .join(', ');
-    console.log('cat_post validation', messages);
+    console.log('user_post validation', messages);
     next(new CustomError(messages, 400));
     return;
   }
@@ -120,7 +120,7 @@ const userPutCurrent = async (
       .array()
       .map((error) => `${error.msg}: ${error.param}`)
       .join(', ');
-    console.log('user_post validation', messages);
+    console.log('user_put_current validation', messages);
     next(new CustomError(messages, 400));
     return;
   }
@@ -150,7 +150,7 @@ const userDelete = async (
       .array()
       .map((error) => `${error.msg}: ${error.param}`)
       .join(', ');
-    console.log('cat_post validation', messages);
+    console.log('user_delete validation', messages);
     next(new CustomError(messages, 400));
     return;
   }
@@ -180,7 +180,7 @@ const userDeleteCurrent = async (
       .array()
       .map((error) => `${error.msg}: ${error.param}`)
       .join(', ');
-    console.log('cat_post validation', messages);
+    console.log('user_delete_current validation', messages);
     next(new CustomError(messages, 400));
     return;
   }

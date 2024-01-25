@@ -104,7 +104,7 @@ const catPut = async (
       .array()
       .map((error) => `${error.msg}: ${error.param}`)
       .join(', ');
-    console.log('cat_post validation', messages);
+    console.log('cat_put validation', messages);
     next(new CustomError(messages, 400));
     return;
   }
